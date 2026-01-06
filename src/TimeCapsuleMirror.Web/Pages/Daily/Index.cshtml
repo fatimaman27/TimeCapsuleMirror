@@ -1,4 +1,22 @@
 ﻿@page
 @model TimeCapsuleMirror.Web.Pages.Daily.IndexModel
 @{
+    ViewData["Title"] = "Daily Question";
 }
+
+<div class="container-hero">
+    <div class="card card-pad float-in">
+        <h2 style="margin:0 0 6px;">Today’s question</h2>
+        <p class="h-sub">This will become your daily reflection system.</p>
+
+        <div class="stat" style="margin:14px 0;">
+            <div class="k">Question</div>
+            <div class="v" style="font-size:18px;">What would make today feel meaningful?</div>
+        </div>
+
+        <form method="post" style="display:grid; gap:10px;">
+            <textarea class="form-control" rows="6" placeholder="Write your answer..."></textarea>
+            <button class="btn btn-primary" type="submit">Save answer (soon)</button>
+        </form>
+    </div>
+</div>

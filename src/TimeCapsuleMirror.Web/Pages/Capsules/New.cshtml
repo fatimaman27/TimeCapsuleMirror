@@ -1,4 +1,21 @@
 ﻿@page
 @model TimeCapsuleMirror.Web.Pages.Capsules.NewModel
 @{
+    ViewData["Title"] = "New Capsule";
 }
+
+<div class="container-hero">
+    <div class="card card-pad float-in">
+        <h2 style="margin:0 0 6px;">Create a time capsule</h2>
+        <p class="h-sub">Write something that opens in the future.</p>
+
+        <form method="post">
+            <div style="display:grid; gap:10px;">
+                <input class="form-control" placeholder="Title" asp-for="Title" />
+                <textarea class="form-control" rows="6" placeholder="Message..." asp-for="Body"></textarea>
+                <input class="form-control" type="datetime-local" asp-for="UnlockAtLocal" />
+                <button class="btn btn-primary" type="submit">Save (for now)</button>
+            </div>
+        </form>
+    </div>
+</div>

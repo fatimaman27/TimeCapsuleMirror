@@ -1,10 +1,47 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "TimeCapsule Mirror";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-hero">
+    <div class="topbar float-in">
+        <div class="brand">
+            <div class="brand-badge"></div>
+            <div>
+                <div style="font-size:14px; color:var(--muted);">TimeCapsule</div>
+                <div style="margin-top:-2px;">Mirror</div>
+            </div>
+        </div>
+
+        <a class="btn" href="/Capsules/New">Create capsule</a>
+    </div>
+
+    <div class="hero">
+        <div class="card card-pad float-in delay-1">
+            <h1 class="h-title">Write to your future self.</h1>
+            <p class="h-sub">
+                One question a day. Time capsules that unlock later.
+                A calm space that evolves with your journey.
+            </p>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <a class="btn btn-primary" href="/Capsules/New">Start a capsule</a>
+                <a class="btn" href="/Daily">Answer today’s question</a>
+            </div>
+
+            <div class="grid-mini">
+                <div class="stat float-in delay-2">
+                    <div class="k">Next unlock</div>
+                    <div class="v">—</div>
+                </div>
+                <div class="stat float-in delay-3">
+                    <div class="k">Daily streak</div>
+                    <div class="v">0 days</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="spark float-in delay-2"></div>
+    </div>
 </div>

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TimeCapsuleMirror.Domain.Entities
+namespace TimeCapsuleMirror.Domain.Common;
+
+public abstract class BaseEntity
 {
-    internal class BaseEntity
-    {
-    }
+    public Guid Id { get; protected set; } = Guid.NewGuid();
 }
